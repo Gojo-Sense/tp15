@@ -1,0 +1,33 @@
+enum TransactionType {
+    COURANT
+    EPARGNE
+}
+
+type Query {
+    allTransactions: [Transaction]
+    transactionById(id : ID): Transaction
+    totalSolde: SoldeStats
+}
+
+type Transaction {
+    id: ID
+    solde: Float
+    dateCreation: String
+    type: TransactionType
+}
+
+type Mutation {
+    saveTransaction(transaction: TransactionRequest): Transaction
+}
+
+input TransactionRequest {
+    solde: Float
+    dateCreation: String
+    type: TransactionType
+}
+
+type SoldeStats {
+    count: Int
+    sum: Float
+    average: Float
+}
