@@ -1,10 +1,10 @@
-package com.example.banque_service;
+package com.example.transaction_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BanqueServiceApplicationTests {
+class TransactionServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
